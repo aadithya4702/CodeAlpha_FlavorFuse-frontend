@@ -14,7 +14,7 @@ export function UserContextProvider({ children }) {
     const storedToken = localStorage.getItem("token");
 
     if (storedToken && !user) {
-      // Fetch user data using the stored token
+      
       axios
         .get("http://localhost:4000/api/users/profile", {
           headers: {
@@ -30,14 +30,14 @@ export function UserContextProvider({ children }) {
           console.error("Error fetching user data:", error);
         });
     }
-  }, [user]); // Include 'user' in the dependency array if needed
+  }, [user]); 
 
   const logout = () => {
-    // Clear user data from local storage
+ 
     localStorage.removeItem("token");
     localStorage.removeItem("user");
 
-    // Clear user data from cookies
+   
     Cookies.remove("token");
 
     setUser(null);
