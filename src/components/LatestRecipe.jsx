@@ -12,7 +12,7 @@ const LatestRecipe = ({ searchdata }) => {
     const latestrecipefunc = async () => {
       try {
         if (searchdata && searchdata.length > 0) {
-          // If searchdata is available and not empty, use it
+
           setlatestrecipe(searchdata);
         } else {
           const response = await axios.get("/users/latestrecipe");
