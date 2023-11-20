@@ -59,7 +59,7 @@ const RecipeDesc = () => {
 
   const handleShareClick = async () => {
     try {
-      const recipeLink = `http://localhost/recipedesc/${recipeId}`;
+      const recipeLink = `https://flavorfuse.netlify.app/recipedesc/${recipeId}`;
       await navigator.clipboard.writeText(recipeLink);
       toast.success("Link copied to clipboard!", {
         position: toast.POSITION.TOP_RIGHT,
