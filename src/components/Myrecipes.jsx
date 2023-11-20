@@ -6,7 +6,7 @@ import { faEdit, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-axios.defaults.baseURL = "http://localhost:4000/api";
+axios.defaults.baseURL = "https://backend-exu9.onrender.com/api";
 axios.defaults.withCredentials = true;
 
 const MyRecipes = () => {
