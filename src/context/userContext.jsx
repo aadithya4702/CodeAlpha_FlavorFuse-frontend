@@ -2,6 +2,9 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { createContext, useEffect, useState } from "react";
 
+Axios.defaults.baseURL = "https://backend-exu9.onrender.com/api";
+Axios.defaults.withCredentials = true;
+
 export const UserContext = createContext();
 
 export function UserContextProvider({ children }) {
@@ -16,7 +19,7 @@ export function UserContextProvider({ children }) {
     if (storedToken && !user) {
       
       axios
-        .get("http://localhost:4000/api/users/profile", {
+        .get("/users/profile", {
           headers: {
             Authorization: `Bearer ${storedToken}`,
           },
