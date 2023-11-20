@@ -2,8 +2,8 @@ import axios from "axios";
 import Cookies from "js-cookie";
 import { createContext, useEffect, useState } from "react";
 
-Axios.defaults.baseURL = "https://backend-exu9.onrender.com/api";
-Axios.defaults.withCredentials = true;
+axios.defaults.baseURL = "https://backend-exu9.onrender.com/api";
+axios.defaults.withCredentials = true;
 
 export const UserContext = createContext();
 
