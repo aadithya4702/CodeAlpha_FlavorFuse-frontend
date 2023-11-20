@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
-Axios.defaults.baseURL = "http://localhost:4000/api";
+Axios.defaults.baseURL = "https://backend-exu9.onrender.com/api";
 Axios.defaults.withCredentials = true;
 
 const Signin = () => {
